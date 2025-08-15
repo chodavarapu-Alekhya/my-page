@@ -10,21 +10,21 @@
     <style>
         :root {
             
-            --primary: #6d28d9; 
-            --primary-dark: #5b21b6;
-            --secondary: #8b5cf6;
-            --accent: #ec4899;
-            --dark: #f8fafc;
-            --dark-secondary: #f1f5f9; 
-            --light: #ffffff;
-            --text: #1e293b; 
-            --text-light: #475569; 
-            --white: #ffffff; 
+            --primary: #6d28d9; `
+            --primary-dark: #5b21b6; * Darker shade of purple */
+            --secondary: #8b5cf6;                
+            --accent: #ec4899; /* A vivid pink/magenta accent */
+            --dark: #f8fafc; /* Very light gray for backgrounds */
+            --dark-secondary: #f1f5f9; /* Slightly darker light gray */
+            --light: #ffffff; /* Pure white for cards/elements */
+            --text: #1e293b; /* Dark charcoal for main text */
+            --text-light: #475569; /* Medium gray for secondary text */
+            --white: #ffffff; /* Still pure white for elements on dark backgrounds, or for primary text on light backgrounds */
 
-          
-            --gradient-1: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%); 
-            --gradient-2: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 50%, #ec4899 100%); 
-            --gradient-3: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            /* More dynamic gradients */
+            --gradient-1: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%); /* Purple to lighter purple */
+            --gradient-2: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 50%, #ec4899 100%); /* Dynamic multi-color gradient */
+            --gradient-3: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); /* Kept original for specific project card */
 
             --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
             --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -47,7 +47,7 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
             color: var(--text);
-            background: var(--dark);
+            background: var(--dark); /* Changed to a very light gray */
             overflow-x: hidden;
         }
 
@@ -57,12 +57,13 @@
             padding: 0 20px;
         }
 
+        /* Advanced Typography */
         .heading-xl {
             font-family: 'Space Grotesk', sans-serif;
             font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 800;
             line-height: 1.1;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1); 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Subtle text shadow */
         }
 
         .heading-lg {
@@ -79,13 +80,14 @@
             line-height: 1.3;
         }
 
+        /* Advanced Navigation */
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95); 
+            background: rgba(255, 255, 255, 0.95); /* Lighter header background */
             backdrop-filter: blur(20px) saturate(180%);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08); 
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08); /* Lighter border, slightly more defined */
             z-index: 1000;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -106,7 +108,7 @@
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.75rem;
             font-weight: 700;
-            background: var(--gradient-2); 
+            background: var(--gradient-2); /* Use more dynamic gradient for logo */
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -126,7 +128,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text); 
+            color: var(--text); /* Darker text for better contrast */
             font-weight: 500;
             font-size: 0.95rem;
             padding: 0.5rem 1rem;
@@ -134,7 +136,7 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
-            z-index: 1; 
+            z-index: 1; /* Ensure text is above the pseudo-element initially */
         }
 
         .nav-links a::before {
@@ -144,31 +146,31 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--gradient-2); 
+            background: var(--gradient-2); /* Dynamic gradient for hover effect */
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            z-index: -1; 
+            z-index: -1; /* Place behind the text */
         }
 
         .nav-links a:hover::before {
-            transform: scaleX(1); 
+            transform: scaleX(1); /* Scale to full width on hover */
         }
 
         .nav-links a:hover {
-            color: var(--white); 
+            color: var(--white); /* White text on hover */
             transform: translateY(-2px);
         }
 
-      
+        /* Hero Section with Advanced Animations */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             position: relative;
-            background: var(--light); 
+            background: var(--light); /* Changed to pure white */
             overflow: hidden;
-            padding-top: 80px; 
+            padding-top: 80px; /* To account for fixed header */
         }
 
         .hero::before {
@@ -179,47 +181,48 @@
             right: 0;
             bottom: 0;
             background: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M60 60c0-16.6-13.4-30-30-30S0 43.4 0 60s13.4 30 30 30 30-13.4 30-30zm30 0c0-16.6-13.4-30-30-30S30 43.4 30 60s13.4 30 30 30 30-13.4 30-30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); /* More prominent pattern */
-            animation: backgroundMove 25s linear infinite;
-            opacity: 0.2; 
+            animation: backgroundMove 25s linear infinite; /* Slower animation */
+            opacity: 0.2; /* Slightly more visible */
+        }
 
         .hero-content {
             position: relative;
             z-index: 2;
-            color: var(--text); 
-            display: flex; 
+            color: var(--text); /* Dark text on light background */
+            display: flex; /* Added for image and text layout */
             align-items: center;
-            gap: 4rem; 
-            flex-wrap: wrap;
-            justify-content: center; 
-            width: 100%; 
+            gap: 4rem; /* Space between image and text */
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            justify-content: center; /* Center items when wrapped */
+            width: 100%; /* Ensure it takes full width of container */
         }
 
-        .hero-text-content { 
+        .hero-text-content { /* New div to group text elements */
             max-width: 800px;
         }
 
-        .hero-profile-pic { 
-            width: 450px;
-            height: 450px; 
-            border-radius: 25px; 
+        .hero-profile-pic { /* Modified style for the profile picture */
+            width: 450px; /* Further increased size */
+            height: 450px; /* Further increased size */
+            border-radius: 25px; /* Slightly more rounded corners */
             object-fit: cover;
-            border: 8px solid rgba(0, 0, 0, 0.1); 
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0,0,0,0.05); 
-            animation: fadeInUp 1s ease 0.2s forwards, profileFloat 8s ease-in-out infinite; 
+            border: 8px solid rgba(0, 0, 0, 0.1); /* Lighter border */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0,0,0,0.05); /* Stronger shadow */
+            animation: fadeInUp 1s ease 0.2s forwards, profileFloat 8s ease-in-out infinite; /* Added subtle float animation */
         }
 
         .hero-profile-pic:hover {
-            transform: scale(1.03) translateY(-5px); 
-            box-shadow: 0 35px 70px -12px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0,0,0,0.1); 
+            transform: scale(1.03) translateY(-5px); /* Subtle hover effect */
+            box-shadow: 0 35px 70px -12px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0,0,0,0.1); /* Stronger shadow on hover */
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(0, 0, 0, 0.05); 
+            background: rgba(0, 0, 0, 0.05); /* Lighter badge background */
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 0, 0, 0.1); 
+            border: 1px solid rgba(0, 0, 0, 0.1); /* Lighter border */
             padding: 0.75rem 1.5rem;
             border-radius: 50px;
             margin-bottom: 2rem;
@@ -227,7 +230,7 @@
             font-weight: 500;
             opacity: 0;
             animation: fadeInUp 1s ease 0.2s forwards;
-            color: var(--text); 
+            color: var(--text); /* Dark text for badge */
         }
 
         .hero-badge .pulse-dot {
@@ -242,7 +245,7 @@
             margin-bottom: 1.5rem;
             opacity: 0;
             animation: fadeInUp 1s ease 0.4s forwards;
-            background: var(--gradient-2); 
+            background: var(--gradient-2); /* Reintroduce gradient for heading */
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -255,7 +258,7 @@
             opacity: 0.9;
             opacity: 0;
             animation: fadeInUp 1s ease 0.6s forwards;
-            color: var(--text-light); 
+            color: var(--text-light); /* Lighter text color */
         }
 
         .hero-description {
@@ -265,8 +268,9 @@
             opacity: 0.8;
             max-width: 600px;
             opacity: 0;
-            animation: fadeInUp 1.2s ease 0.8s forwards;
-            color: var(--text-light); 
+            animation: fadeInUp 1.2s ease 0.8s forwards; /* Increased duration for smoother fade */
+            color: var(--text-light); /* Lighter text color */
+        }
 
         .hero-cta {
             display: flex;
@@ -277,9 +281,9 @@
         }
 
         .btn-primary {
-            background: var(--gradient-2); 
+            background: var(--gradient-2); /* Use gradient for primary button */
             color: var(--white);
-            padding: 1.2rem 3rem; 
+            padding: 1.2rem 3rem; /* Slightly larger padding */
             border: none;
             border-radius: 50px;
             font-weight: 600;
@@ -290,7 +294,7 @@
             gap: 0.5rem;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: var(--shadow-lg);
-            position: relative;
+            position: relative; /* For the subtle shimmer effect */
             overflow: hidden;
         }
 
@@ -312,14 +316,14 @@
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: var(--shadow-2xl);
-            
+            /* background: var(--primary-dark); */ /* Removed as gradient now used */
         }
 
         .btn-secondary {
             background: transparent;
-            color: var(--primary); 
+            color: var(--primary); /* Primary color for secondary button text */
             padding: 1.2rem 3rem;
-            border: 2px solid var(--primary); 
+            border: 2px solid var(--primary); /* Primary color for secondary button border */
             border-radius: 50px;
             font-weight: 600;
             font-size: 1rem;
@@ -332,14 +336,14 @@
         }
 
         .btn-secondary:hover {
-            background: var(--primary);
+            background: var(--primary); /* Primary background on hover */
             border-color: var(--primary);
-            color: var(--white); 
+            color: var(--white); /* White text on hover */
             transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
         }
 
-     
+        /* Floating Elements */
         .floating-shapes {
             position: absolute;
             top: 0;
@@ -352,9 +356,9 @@
 
         .floating-shape {
             position: absolute;
-            opacity: 0.1; 
-            filter: blur(2px); 
-            border-radius: 50%;
+            opacity: 0.1; /* More subtle opacity */
+            filter: blur(2px); /* Slightly more blur */
+            border-radius: 50%; /* Make all shapes round initially for consistency */
         }
 
         .shape-1 {
@@ -382,7 +386,7 @@
             height: 90px;
             background: var(--accent);
             animation: float3 14s ease-in-out infinite;
-            border-radius: 30%; 
+            border-radius: 30%; /* Make it more squarish */
         }
 
         .shape-4 {
@@ -392,7 +396,7 @@
             height: 160px;
             background: var(--primary-dark);
             animation: float1 18s ease-in-out infinite;
-            border-radius: 40%; 
+            border-radius: 40%; /* Make it more squarish */
         }
         .shape-5 {
             top: 50%;
@@ -414,10 +418,10 @@
         }
 
 
-     
+        /* About Section with Bento Grid */
         .about {
             padding: 8rem 0;
-            background: var(--dark); 
+            background: var(--dark); /* Changed to light background */
         }
 
         .section-header {
@@ -427,8 +431,8 @@
 
         .section-badge {
             display: inline-block;
-            background: var(--gradient-2); 
-            color: var(--white); 
+            background: var(--gradient-2); /* Use dynamic gradient for badge */
+            color: var(--white); /* White text on primary background */
             background-clip: unset;
             -webkit-background-clip: unset;
             -webkit-text-fill-color: unset;
@@ -437,9 +441,9 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
             margin-bottom: 1rem;
-            padding: 0.5rem 1rem; 
-            border-radius: 20px;
-            box-shadow: var(--shadow-sm); 
+            padding: 0.5rem 1rem; /* Added padding for badge */
+            border-radius: 20px; /* Rounded corners for badge */
+            box-shadow: var(--shadow-sm); /* Subtle shadow for badge */
         }
 
         .bento-grid {
@@ -450,15 +454,15 @@
         }
 
         .bento-card {
-            background: var(--light);
+            background: var(--light); /* White background for cards */
             border-radius: 24px;
             padding: 2.5rem;
             box-shadow: var(--shadow-md);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05); /* Lighter border */
             position: relative;
             overflow: hidden;
-            z-index: 1; 
+            z-index: 1; /* Ensure content is above pseudo-element */
         }
 
         .bento-card::before {
@@ -468,13 +472,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--gradient-1);
+            background: var(--gradient-1); /* Use a subtle gradient for subtle hover effect */
             transform: scale(0);
             transform-origin: top left;
             transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
             z-index: -1;
             border-radius: 24px;
-            opacity: 0.6;
+            opacity: 0.6; /* Subtle transparency */
         }
 
         .bento-card:hover::before {
@@ -484,7 +488,7 @@
         .bento-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-2xl);
-            color: var(--text); 
+            color: var(--text); /* Ensure text remains readable */
         }
 
         .bento-large {
@@ -502,15 +506,16 @@
         .skill-icon {
             width: 60px;
             height: 60px;
-            background: var(--gradient-1); 
-            color: var(--white); 
+            background: var(--gradient-1); /* Gradient for skill icons */
+            color: var(--white); /* White icons */
             border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
-            box-shadow: var(--shadow-sm); 
+            box-shadow: var(--shadow-sm); /* Subtle shadow for icon */
+        }
 
         .skill-list {
             display: flex;
@@ -520,13 +525,14 @@
         }
 
         .skill-tag {
-            background: var(--dark-secondary);
-            color: var(--text-light); 
+            background: var(--dark-secondary); /* Lighter background for tags */
+            color: var(--text-light); /* Darker text for tags */
             padding: 0.5rem 1rem;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 500;
-            border: 1px solid rgba(0, 0, 0, 0.08); 
+            border: 1px solid rgba(0, 0, 0, 0.08); /* Slightly more defined border */
+            transition: all 0.2s ease;
         }
 
         .skill-tag:hover {
@@ -536,10 +542,10 @@
             box-shadow: var(--shadow-sm);
         }
 
-      
+        /* Advanced Projects Section */
         .projects {
             padding: 8rem 0;
-            background: var(--light); 
+            background: var(--light); /* White background for projects */
         }
 
         .projects-filter {
@@ -576,15 +582,15 @@
         }
 
         .project-card {
-            background: var(--white); 
+            background: var(--white); /* White background for project cards */
             border-radius: 24px;
             overflow: hidden;
             box-shadow: var(--shadow-lg);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(0, 0, 0, 0.05); 
+            border: 1px solid rgba(0, 0, 0, 0.05); /* Lighter border */
             position: relative;
             group: hover;
-            animation: fadeIn 0.8s ease-out forwards; 
+            animation: fadeIn 0.8s ease-out forwards; /* Added fadeIn animation */
         }
 
         .project-card:hover {
@@ -594,7 +600,7 @@
 
         .project-image {
             height: 280px;
-            background: var(--gradient-1); 
+            background: var(--gradient-1); /* Lighter gradient for project image backgrounds */
             position: relative;
             overflow: hidden;
             display: flex;
@@ -609,9 +615,16 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.08'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E"); 
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.08'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E"); /* Slightly more visible pattern */
             animation: backgroundMove 15s linear infinite;
         }
+
+        .project-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+       }   
 
         .project-icon {
             font-size: 4rem;
@@ -637,8 +650,8 @@
         }
 
         .project-type {
-            background: var(--primary);
-            color: var(--white); 
+            background: var(--primary); /* Primary color for project type */
+            color: var(--white); /* White text */
             background-clip: unset;
             -webkit-background-clip: unset;
             -webkit-text-fill-color: unset;
@@ -646,8 +659,8 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            padding: 0.25rem 0.75rem; 
-            border-radius: 15px; 
+            padding: 0.25rem 0.75rem; /* Added padding */
+            border-radius: 15px; /* Rounded corners */
             box-shadow: var(--shadow-sm);
         }
 
@@ -658,7 +671,7 @@
 
         .project-title {
             margin-bottom: 1rem;
-            color: var(--text); 
+            color: var(--text); /* Darker text */
         }
 
         .project-description {
@@ -675,13 +688,13 @@
         }
 
         .project-tag {
-            background: var(--dark-secondary); 
-            color: var(--text-light); 
+            background: var(--dark-secondary); /* Lighter background for tags */
+            color: var(--text-light); /* Darker text */
             padding: 0.4rem 1rem;
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 500;
-            border: 1px solid rgba(0, 0, 0, 0.08); 
+            border: 1px solid rgba(0, 0, 0, 0.08); /* Slightly more defined border */
             transition: all 0.2s ease;
         }
 
@@ -1220,7 +1233,10 @@
             <div class="hero-content">
                 <img src="me.pnj.jpg.jpg" alt="Alex" class="hero-profile-pic">
 
-               
+                <div class="hero-text-content">
+                    <div class="hero-badge">
+                        <div class="pulse-dot"></div>
+                        Available for new opportunities
                     </div>
                     <h1 class="heading-xl">Alekhya Chodavarapu</h1>
                     <p class="hero-subtitle">UX/UI Designer & Researcher</p>
@@ -1249,10 +1265,10 @@
                 <div class="section-badge">About Me</div>
                 <h2 class="heading-lg">Passionate About Human-Centered Design</h2>
                 <p style="max-width: 600px; margin: 0 auto; color: var(--text-light); font-size: 1.1rem;">
-                    Currently pursuing my Master's in Information Systems at Indiana Institute of Technology,
-                    with a unique background that bridges technology and user experience.
+             I am a recent graduate of the Master's in Information Systems program at Indiana Institute of Technology, where I cultivated a unique skill set blending technology with human-centered design. My background allows me to bridge the gap between complex systems and intuitive user experiences.
                 </p>
             </div>
+             
 
             <div class="bento-grid">
                 <div class="bento-card bento-large">
@@ -1294,6 +1310,10 @@
                         <span class="skill-tag">Figma</span>
                         <span class="skill-tag">Adobe XD</span>
                         <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">Infographics</span>
+                        <span class="skill-tag"> Adobe Premiere Pro</span>
+                         <span class="skill-tag"> Adobe  dimension</span>
+                        
                     </div>
                 </div>
 
@@ -1317,7 +1337,7 @@
                     <div class="skill-icon">🎓</div>
                     <h3 class="heading-md">Education & Growth</h3>
                     <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1.5rem;">
-                        Currently pursuing Master's in Information Systems at Indiana Institute of Technology.
+                        I am a recent graduate of the Master's in Information Systems at Indiana Institute of Technology.
                         Specialized coursework in HCI, UX Research, and Interaction Design.
                     </p>
                     <div class="skill-list">
@@ -1338,8 +1358,9 @@
                 <p style="max-width: 600px; margin: 0 auto; color: var(--text-light); font-size: 1.1rem;">
                     Real-world projects showcasing user-centered design process, from research to implementation.
                 </p>
-            </div>
-              <div class="projects-filter">
+            
+</div>
+  <div class="projects-filter">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
                 <button class="filter-btn" data-filter="ux">UX Research</button>
                 <button class="filter-btn" data-filter="ui">UI Design</button>
@@ -1581,7 +1602,6 @@
                     <div class="contact-card">
                         <div class="contact-icon">📍</div>
                         <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Location</h4>
-                         <p style="opacity: 0.8; margin-bottom: 1rem;">San Francisco</p>
                         <p style="opacity: 0.8; margin-bottom: 1rem;">Open to relocation</p>
 
                     </div>
@@ -1792,8 +1812,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
